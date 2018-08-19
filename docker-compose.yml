@@ -1,0 +1,9 @@
+version: "3.6"
+services:
+    revproxy:
+        image: nginx
+        ports:
+            - 80-81:80-81
+            - 443-445:443-445
+        volumes:
+            - "/efs/nginx:/etc/nginx"
